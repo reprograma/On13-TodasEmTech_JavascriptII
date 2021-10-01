@@ -251,7 +251,7 @@ Ele recebe um único argumento de string, que pode conter vários identificadore
 | parentNode           | Retorna o nodo pai de um nodo.                                                       |
 
 ---
-<a id="#changingContent"></a>
+<a id="changingContent"></a>
 
 ### Retornando e modificando conteúdo do DOM
 
