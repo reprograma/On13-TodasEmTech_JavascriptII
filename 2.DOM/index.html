@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .aurora-img {
+            width: 300px;
+            margin: 50px;
+        }
+
+        #paragrafo {
+            width: 50%;
+            color: #ffffff;
+            text-align: center;
+        }
+
+        .classeDoMeuJavascript {
+            margin: 150px;
+            transition: 0.5s;
+        }
+
+        .classeDoMeuJavascript:hover {
+            cursor: pointer;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Eu tou na <i>turma 13</i> e tou contente</h1>
+        <p id="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem suscipit, quaerat nesciunt
+            exercitationem dicta placeat ea, modi maiores veritatis sequi consectetur similique praesentium sunt quis,
+            voluptate a fuga quidem iure.</p>
+        <img class="aurora-img" src="./../Northern Lights Papel de Parede HD _ Plano de Fundo _ 1920x1200.jpg"
+            alt="aurora boreal">
+        <label for="input1">Nome: </label>
+        <input type="text" name="input1" id="nome">
+    </section>
+    <section>
+        <div>
+
+        </div>
+
+
+    </section>
+
+    <script type="text/javascript">
+
+        //para saber se selecionou teste com o console.log ou console.dir
+        //selecionando o nosso elemento usando o DOM
+
+        const section = window.document.getElementsByTagName("section")[0];
+
+        const paragrafo1 = document.getElementById("paragrafo");
+
+        const aurora = document.getElementsByClassName("aurora-img")[0];
+
+        const titulo = window.document.querySelector("h1");
+
+        const inputNome = document.querySelector("#nome");
+
+        /*modificando valores:
+        .innerText pega o texto sem formatação
+        .textContent pega o texto com formatação
+        .innetHTML me permite modificar ou criar elementos com html (pega formatação) */
+
+        titulo.innerHTML = "Hoje faz sol em <i>Recife</i>, ontem choveu!"
+
+        // .value captura o valor do que foi escrito dentro da minha caixa de texto (input)
+        inputNome.value = "Reprograma é show"
+
+        //modificando estilo:
+        titulo.style.color = "black";
+
+        //camelCase = letraDeCamelo
+        document.body.style.backgroundColor = "grey";
+
+        //adicionando e removendo classes
+        titulo.classList.add('classeDoMeuJavascript');
+
+        // quando varios elementos são selecionados ao mesmo tempo, podemos iterar por eles
+
+        /*
+        for (let el of aurora) {
+            el.classList.remove("aurora-img")
+        }
+        */
+
+        console.log(aurora.getAttribute('src'));
+        aurora.setAttribute('src', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXaod5Aee1eczMCFMoBqPcvoPC5vFGL1RTHg&usqp=CAU');
+        aurora.setAttribute("alt", "por do sol")
+
+
+    </script>
+</body>
+
+</html>

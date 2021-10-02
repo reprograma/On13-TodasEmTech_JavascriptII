@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<!--
+                ETAPA 1
+                Crie um HTML com tres divs vazias e um paragrafo com texto. Cada div com um id.
+        
+                ETAPA 2
+                Faça uma tag script no fim do body e selecione todos os elementos do html e guarde em variáveis
+        
+                ETAPA 3
+                Mostre o valor de <p> no console
+        
+                ETAPA 4
+                Mude o valor de <p>
+        
+                ETAPA 5
+                Mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+
+                ETAPA 6
+                Adicione pelo javascript uma classe para o paragrafo
+
+            -->
+
+<body>
+
+    <div id="div1">
+       
+    </div>
+
+    <div id="div2">
+        
+    </div>
+
+    <div id="div3">
+        
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo rem, illum neque expedita atque minima. Quo est adipisci quae voluptate quam ab veritatis qui facere in similique? Illo, alias dignissimos.
+    </p>
+
+
+    <script type="text/javascript">
+
+    //Selecionando o elemento
+
+    let body = document.body;
+    const primeiraDiv = document.getElementById("div1");
+    const segundaDiv = document.getElementById("div2");
+    const terceiraDiv = document.getElementById("div3");
+    const paragrafo = document.querySelector("p");
+
+    //Mostrando o valor de p
+    console.log(paragrafo);
+
+    //Mudando o valor de p
+    paragrafo.innerHTML = "Hello, World!";
+
+    //Adicionando uma classe para o paragrafo
+    paragrafo.setAttribute ('class', 'renome');
+
+    //Mudando estilo das divs (cores)
+    primeiraDiv.style.backgroundColor = 'grey';
+    segundaDiv.style.backgroundColor = 'aqua';
+    terceiraDiv.style.backgroundColor = 'pink';
+
+    primeiraDiv.style.padding = "10px";
+    segundaDiv.style.padding = "10px";
+    terceiraDiv.style.padding = "10px";
+
+    </script>
+</body>
+
+</html>
