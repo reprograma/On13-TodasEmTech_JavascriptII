@@ -1,0 +1,42 @@
+<!-- 
+    1. Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    2. Faça uma tag script no fim do body selecione todos os elementos do html e guarde em variáveis
+    3. mostre o valor de <p> no console
+    4. mude o valor de <p> 
+    5. mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    6. adicione pelo javascript uma classe para o paragrafo
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 1</title>
+</head>
+<body>
+    <div id="div1"></div>
+
+    <div id="div2"></div>
+
+    <div id="div3"></div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere corporis animi ratione, tempore repellendus vero distinctio aut quisquam omnis nostrum minus eaque perspiciatis dignissimos corrupti repudiandae sapiente optio fugiat eius.</p>
+
+<script type="text/javascript">
+    let guardarBody= document.body;
+    const div1= document.getElementById("div1");
+    const div2= document.getElementById("div2");
+    const div3= document.getElementById("div3");
+    let paragrafo= document.querySelector('p');
+    console.log(paragrafo);
+    paragrafo.innerHTML="deu certo?"
+    div1.setAttribute("class", "renome");
+    div1.style.backgroundColor= "red";
+    div2.style.backgroundColor= "black";
+    div3.style.backgroundColor= "green";
+    div1.style.fontSize= "80px";
+</script>
+</body>
+</html>
