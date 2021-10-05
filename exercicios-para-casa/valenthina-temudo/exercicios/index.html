@@ -37,6 +37,8 @@
 
     <script type="text/javascript">
 
+    //EXERCÍCIO 1
+
     //Criando variável
     const section = document.getElementsByTagName('section')[0];
     const titulo = document.querySelector('h1');
@@ -55,6 +57,26 @@
 
     //Criando novo elemento HTML
     titulo.innerHTML = "A beleza <strong>extraordinária</strong> da aurora boreal";
+
+    //EXERCÍCIO 2
+    // - Quem é o elemento `pai/mãe` do seu artigo? 
+    section.parentElement
+    console.log(section)
+    
+
+    // - Quem são os elementos `filhes` do seu artigo? 
+    aurora.children
+
+    // - Qual elemento é o `próximo irmão` do elemento parágrafo?
+
+    //EXERCÍCIO 3
+    //Evento
+    aurora.addEventListener("mouseover", function (){
+        aurora.style.width = "700px";
+    });
+    aurora.addEventListener("mouseout", function(){
+        aurora.style.width = "500px";
+    });
    
     </script>
 </body>
