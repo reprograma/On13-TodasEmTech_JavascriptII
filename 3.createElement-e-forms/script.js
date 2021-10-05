@@ -5,7 +5,6 @@ const botaoForm = document.querySelector("form button");
 const caixaResultado = document.querySelector("#caixaResultado");
 
 
-
 function submit(evento) {
     evento.preventDefault();
 
