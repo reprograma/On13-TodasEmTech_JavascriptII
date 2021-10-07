@@ -14,6 +14,7 @@ function submit(evento) {
     let resultado = document.createElement('p');
     caixaResultado.appendChild(resultado);
     resultado.innerText = `o resutado de ${num1Value} + ${num2Value} é = ${total}`
+    
 }
 
 formulario.addEventListener("submit", submit);
