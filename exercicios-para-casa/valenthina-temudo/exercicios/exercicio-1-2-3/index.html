@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,72 +13,83 @@
             align-items: center;
             flex-direction: column;
         }
+
         .aurora-img {
             width: 500px;
             margin: 50px;
             border-radius: 50px;
         }
-        h1, a {
+
+        h1,
+        a {
             font: 40px Arial;
             color: rgb(17, 131, 97);
         }
-        
+
         p {
             font: 20px Arial;
             color: black;
         }
     </style>
 </head>
+
 <body>
-    <section> 
+    <article>
         <h1><a href="https://auroraboreal.com.br/o-que-e-aurora-boreal/">A beleza da aurora boreal</a></h1>
-        <p id="paragrafo">Aurora boreal é um fenômeno óptico que ocorre a partir do contato de partículas provenientes do vento solar com a alta atmosfera, que são canalizadas pelo campo magnético da Terra. Ela é observada com mais frequência em fevereiro, março, abril, setembro e outubro. Além disso, ela acontece apenas nas áreas de elevada latitude, como o Polo Norte, em razão da força do campo magnético da Terra.</p>
-        <img class="aurora-img" src="./../Northern Lights Papel de Parede HD _ Plano de Fundo _ 1920x1200.jpg" alt="aurora boreal">
-    </section>
+        <p id="paragrafo">Aurora boreal é um fenômeno óptico que ocorre a partir do contato de partículas provenientes
+            do vento solar com a alta atmosfera, que são canalizadas pelo campo magnético da Terra. Ela é observada com
+            mais frequência em fevereiro, março, abril, setembro e outubro. Além disso, ela acontece apenas nas áreas de
+            elevada latitude, como o Polo Norte, em razão da força do campo magnético da Terra.</p>
+        <img class="aurora-img" src="./Northern Lights Papel de Parede HD _ Plano de Fundo _ 1920x1200.jpg"
+            alt="aurora boreal">
+    </article>
 
     <script type="text/javascript">
 
-    //EXERCÍCIO 1
+        //EXERCÍCIO 1
 
-    //Criando variável
-    const section = document.getElementsByTagName('section')[0];
-    const titulo = document.querySelector('h1');
-    const paragrafo1 = document.getElementById('paragrafo');
-    const aurora = document.getElementsByClassName('aurora-img')[0];
-    const link = document.querySelector('a');
+        //Criando variável
+        const artigo = document.getElementsByTagName('article')[0];
+        const titulo = document.querySelector('h1');
+        const paragrafo1 = document.getElementById('paragrafo');
+        const aurora = document.getElementsByClassName('aurora-img')[0];
+        const link = document.querySelector('a');
 
-    //Adicionando uma classe no paragrafo
-    paragrafo1.setAttribute ('class', 'sobre-aurora');
+        //Adicionando uma classe no paragrafo
+        paragrafo1.setAttribute('class', 'sobre-aurora');
 
-    //Modificando estilo da imagem
-    aurora.style.boxShadow = "10px 10px 10px rgba(0, 0, 0, 0.5)";
+        //Modificando estilo da imagem
+        aurora.style.boxShadow = "10px 10px 10px rgba(0, 0, 0, 0.5)";
 
-    //Modificando o valor do href
-    link.setAttribute('href', 'index.html');
+        //Modificando o valor do href
+        link.setAttribute('href', 'index.html');
 
-    //Criando novo elemento HTML
-    titulo.innerHTML = "A beleza <strong>extraordinária</strong> da aurora boreal";
+        //Criando novo elemento HTML
+        titulo.innerHTML = "A beleza <strong>extraordinária</strong> da aurora boreal";
 
-    //EXERCÍCIO 2
-    // - Quem é o elemento `pai/mãe` do seu artigo? 
-    section.parentElement
-    console.log(section)
-    
+        //EXERCÍCIO 2
+        // Elemento `pai/mãe` do artigo
+        artigo.parentElement;
+        // console.log(artigo.parentElement);
 
-    // - Quem são os elementos `filhes` do seu artigo? 
-    aurora.children
+        // Elemento `filhes` do artigo 
+        artigo.children;
+        // console.log(artigo.children);
 
-    // - Qual elemento é o `próximo irmão` do elemento parágrafo?
+        // Elemento que é o `próximo irmão` do elemento parágrafo
+        paragrafo1.nextElementSibling;
+        // console.log(paragrafo1.nextElementSibling);
 
-    //EXERCÍCIO 3
-    //Evento
-    aurora.addEventListener("mouseover", function (){
-        aurora.style.width = "700px";
-    });
-    aurora.addEventListener("mouseout", function(){
-        aurora.style.width = "500px";
-    });
-   
+        //EXERCÍCIO 3
+        //Evento
+        aurora.addEventListener("mouseover", function () {
+            aurora.style.width = "700px";
+        });
+        aurora.addEventListener("mouseout", function () {
+            aurora.style.width = "500px";
+        });
+
     </script>
 </body>
+
 </html>

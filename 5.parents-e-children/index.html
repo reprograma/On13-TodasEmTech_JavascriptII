@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent, child, sibling</title>
+</head>
+
+<body style="margin: 0;">
+    <div style="padding: 20px">
+        <section id="section">
+            <p class="paragrafo"><strong>Olá</strong> mundo</p>
+            <p class="paragrafo">Tudo legal turma?</p>
+        </section>
+    </div>
+  
+    <script type="text/javascript">
+        /*children = filhes,
+        sibling = irmã/irmão,
+        parent = pais/mães */
+
+        let sessao = document.querySelector("#section");
+    // console.log(sessao.children) // mostra o objeto com os elementos filhos
+    // console.log(sessao.parentElement) // mostra o pai/ mãe do elemento
+    // console.log(document.body.previousElementSibling) // mostra elemento irmão/irmã anterior
+
+    sessao.style.backgroundColor = "yellow";
+    sessao.parentElement.style.backgroundColor = "pink";
+    </script>
+</body>
+
+</html>
