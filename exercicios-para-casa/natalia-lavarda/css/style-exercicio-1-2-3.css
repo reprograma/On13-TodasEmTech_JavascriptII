@@ -1,0 +1,149 @@
+/* 
+ETAPA 2
+*/
+
+html, 
+body  {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #ffc8dd;
+    display: flex;
+    align-items: center;
+}
+
+.header__menu {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    width: 20%;
+}
+
+.header__menu-lista {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.header__menu-li {
+    padding: 30px 50px;
+    transition: 0.5s all;
+}
+
+.header__menu-li:hover {
+    background-color: #cdb4db;
+    color: #3f37c9;
+}
+
+.header__menu-link {
+    text-decoration: none;
+    color: #3f37c9;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+section {
+    width: 100%;
+    margin-top: 15vh;
+    background-color: #c9184a;
+}
+
+.section__article {
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #ffafcc;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5vh 0;
+    color: #3f37c9;
+    text-shadow: 1px 1px 2px #25207e;
+}
+
+.section__img-round {
+    width: 20%;
+    margin: 15px auto;
+    border-radius: 50%;
+}
+
+.img-transform {
+    transform: scale(1.1);
+    transition: 0.5s all;
+}
+
+.section__img-border {
+    border: 2px dotted #3b3b3b;
+}
+
+.section__img {
+    width: 60%;
+    margin: 15px auto;
+    box-shadow: 1px 1px 2px #3b3b3b;
+}
+
+.section__paragraph {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: red;
+}
+
+.section__paragraph-color {
+    color: #3b3b3b;
+}
+
+.section__link1, 
+.section__link2 {
+    width: 60%;
+    margin: auto;
+    margin-top: 20px;
+    text-decoration: none;
+    color: #3f37c9;
+    font-weight: 600;
+    transition: 0.5s all;
+}
+
+.section__link1:hover,
+.section__link2:hover {
+    color: #c9184a;
+}
+
+.section__link2 {
+    margin-bottom: 30px;
+}
+
+.footer {
+    background-color: #ffc8dd;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #3f37c9;
+    font-weight: 600;
+}

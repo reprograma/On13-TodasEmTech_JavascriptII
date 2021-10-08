@@ -1,0 +1,120 @@
+/* 
+ETAPA 2
+*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+    position: relative;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 15vh;
+    background-color: #ffc8dd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 50px;
+    margin-left: 2vw;
+    color: #3f37c9;
+    text-decoration: none;
+    transition: 0.5s all;
+}
+
+.header__logo:hover {
+    color: #ff347f;
+}
+
+section {
+    width: 100%;
+    margin-top: 15vh;
+    background-color: #c9184a;
+}
+
+.section__article {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffafcc;
+}
+
+.section__title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #3f37c9;
+    text-shadow: 1px 1px 2px #25207e;
+    margin: 20px 0 10px 0;
+}
+
+.section__subtitle {
+    text-align: center;
+    font-size: 1.8rem;
+    color: #3f37c9;
+    text-shadow: 1px 1px 2px #25207e;
+}
+
+.article__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 10px;
+    list-style: none;
+    text-align: center;
+    font-size: 18px;
+    color: #3b3b3b;
+    margin-bottom: 50px;
+}
+
+.section__img-round {
+    width: 20%;
+    margin: 15px auto;
+    border-radius: 50%;
+}
+
+.section__paragraph {
+    width: 60%;
+    margin: auto;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #3b3b3b;
+    padding: 10px;
+}
+
+.section__link {
+    width: 60%;
+    margin: 20px auto 40px auto;
+    text-decoration: none;
+    text-align: center;
+    color: #3f37c9;
+    font-weight: 600;
+    transition: 0.5s all;
+}
+
+.section__link:hover {
+    color: #c9184a;
+}
+
+.footer {
+    background-color: #ffc8dd;
+    width: 100%;
+    height: 5vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 1px;
+    color: #3f37c9;
+    font-weight: 600;
+}
