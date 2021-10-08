@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site da Isa</title>
+
+    <style>
+
+    #paragrafo {
+        width: 50%;
+    }
+    .image{
+       width: 200px;
+        margin: px;
+        height: 200px;
+        transition: 0.7s;
+    }
+    
+    </style>
+
+</head>
+
+<body>
+
+        <article id="article">
+
+            <h1>Essa sou eu</h1>
+            <p  id="paragrafo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam quaerat ab magnam veniam reprehenderit, quibusdam eos maiores neque illo deleniti laboriosam amet, temporibus, repellat illum earum sint! Aperiam, harum sed.</p>
+    
+
+        </article>
+
+            
+      
+     <img class="image" src="./perfil.jpg" alt="image">
+    
+
+    
+        <a class="link" href="https://www.facebook.com/isabella.brandao.562/">Redes socias</a>
+      
+
+        <form >
+        <label>Name</label>
+        <input type="nome" id="name">
+        <label>password</label>
+        <input type="password" id="password">
+        <input type="submit" value="entrar" id="login">
+        </form>
+        <footer id="finalmessage"></footer>
+
+        <script type="text/javascript">
+
+            //adicionando classe para p
+
+            const paragrafo = document.getElementById('paragrafo')
+        
+
+            paragrafo.innerHTML = "Essa é a Isa";
+            paragrafo.style.color ="purple";
+
+        paragrafo.setAttribute('class' , 'Bem-vindo')
+
+        
+        // estilizando imagem com css
+            const image = document.getElementsByClassName('image')
+
+            document.body.style.width =  "200px";
+            
+            //mudandoLink
+            const novoLink = document.getElementsByClassName('link')[0];
+            
+            novoLink.setAttribute('href', 'https://qastack.com.br/programming/4365246/how-to-change-href-of-a-tag-on-button-click-through-javascript')
+
+            //elementos pais e filhes
+            let sessao = document.querySelector("#section")
+            console.log(sessao.children) //mostra objeto com elementos filhos 
+            console.log(sessao.parentChild) //mostra o pai /mae do elemento
+            console.log(document.body.previousElementSibling) //mostra elelemento irmão
+
+
+            //formulario
+            let name = document.getElementById('name')
+            let login = document.getElementById('login')
+            let footer = document.getElementById('finalmessage')
+            let message = document.createElement('p');
+        
+            finalmessage.appendChild(message)
+
+            const hiddenMessage = () => message.style.display = "none";
+            
+
+            let messageOfClick = document.createElement('p');
+            messageOfClick.innerText = 'Wellcome'
+            messageOfClick.style.visibility = "hidden";
+            finalmessage.appendChild(messageOfClick)
+
+            function showMessage(){
+            hiddenMessage
+            messageOfClick.style.visibility = "visible"
+            }
+            
+            login.addEventListener("submit", showMessage)
+
+            //click
+            
+            image.addEventListener("mouseover", imageGonnaBeLargeWhenMouseOver)
+            image.addEventListener("mouseout", imageNormalSize)
+
+            //mouse over
+            function imageGonnaBeLargeWhenMouseOver() {
+                image.style.width = "800px";
+            }
+            function imageNormalSize() {
+                image.style.width = "464px"
+            }
+
+        </script>
+</body>
+</html>
