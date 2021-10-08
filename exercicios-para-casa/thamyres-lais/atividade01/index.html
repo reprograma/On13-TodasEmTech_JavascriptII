@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 1- Exercício para casa</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <article>
+
+        <p>
+            Herman Tømmeraas é um ator norueguês mais conhecido por seu personagem recorrente na série dramática adolescente de TV Skam.
+        </p>
+
+        <img src="https://i.pinimg.com/originals/1c/93/bd/1c93bda24c623da807c00ceacb855f4a.jpg" alt="Herman Tømmeraas">
+        
+        <a href="https://en.wikipedia.org/wiki/Herman_T%C3%B8mmeraas">Mais sobre Herman </a>
+    </article>
+
+    <script type="text/javascript">
+       //ETAPA 3
+       const artigo = document.querySelector("article");
+        //console.log(artigo)
+        const paragrafo = document.querySelector("p");
+        //console.log(paragrafo)
+        const imagem = document.querySelector("img");
+        //console.log(imagem)
+        const linkA = document.querySelector("a");
+        //console.log(linkA)
+        const body = document.body
+        //ETAPA 4
+        paragrafo.classList.add('classeDoJavaScript');
+
+        //ETAPA 5
+        imagem.style.width = "200px"
+        imagem.style.margin = "30px"
+
+        //ETAPA 6
+        linkA.setAttribute('href' , 'https://www.instagram.com/hermantommeraas/?hl=pt');
+        
+        //ETAPA 7 
+        const titulo = document.createElement('h1');
+        body.appendChild(titulo);
+
+        // #### 2 
+        
+        //console.log (artigo.parentElement)
+
+        //console.log(artigo.children);
+
+        //console.log(document.body.previousElementSibling);
+    
+        // #### 3
+        const fator_lupa = 2
+        imagem.onmouseover = function () { this.style.width = (this.clientWidth * fator_lupa) + "px"; };
+
+        imagem.onmouseout = function () { this.style.width = (this.clientWidth / fator_lupa) + "px"; };
+
+
+
+    </script>
+</body>
+</html>

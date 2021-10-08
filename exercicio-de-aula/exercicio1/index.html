@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    Crie um HTML com três div vazias e um parágrafo com texto. Cada div com um id.
+    Faça uma tag script no fim do body, selecione todos os elementos do HTML e guarde em variáveis.
+    Mostre o valor de <p> no console.
+    Mude o valor de <p>
+    Mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente.
+    Adicione pelo javascript uma classe para o parágrafo.
+-->
+<body>
+    <div id="div1">
+        oi
+    </div>
+
+    <div id="div2">
+        oi
+    </div>
+    
+    <div id="div3">
+        oi
+    </div>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea maiores aperiam labore mollitia earum ducimus vel omnis ex, impedit blanditiis quibusdam rem sapiente corrupti facilis incidunt consectetur fugiat cumque ad?</p>
+
+    <script type="text/javascript">
+
+        let guardarBody = document.body
+
+        const divUm = document.getElementById("div1");
+        
+        const divDois = document.getElementById("div2");
+        
+        const divTres = document.getElementById("div3");
+        
+        let paragrafo = document.querySelector('p');
+
+        console.log(paragrafo);
+
+        paragrafo.innerHTML = "Oi, como as coisas estão se desenvolvendo aqui? "
+
+        divUm.setAttribute("class", "renome")
+        divUm.style.backgroundColor = "black"
+        divDois.style.backgroundColor = "yellow"
+        divTres.style.backgroundColor = "green"
+        
+        divUm.style.fontSize = "40px";
+        divDois.style.fontSize = "40px";
+        divTres.style.fontSize = "40px";
+
+    </script>
+</body>
+</html>
