@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <section class="conteudo"></section>
+
+    <script>
+      const conteudo = document.querySelector(".conteudo");
+      const titulo = document.createElement("h1");
+      const artigo = document.createElement("article");
+      const paragrafoDoArtigo = document.createElement("p");
+      const imagemDoArtigo = document.createElement("img");
+      imagemDoArtigo.setAttribute(
+        "src",
+        "https://tecnoblog.net/wp-content/uploads/2020/03/doom-eternal-2.jpg"
+      );
+      const linkDoArtigo = document.createElement("a");
+      const botaoDoArtigo = document.createElement("button");
+
+      function tituloDaPagina() {
+        const textoDoConteudo = document.createTextNode(
+          "H1 vindo diretamente do DOM  🔥"
+        );
+        titulo.classList.add("titulo");
+        titulo.appendChild(textoDoConteudo);
+        conteudo.appendChild(titulo);
+        titulo.style.color = "blue";
+      }
+
+      tituloDaPagina();
+
+      function artigoDaPagina() {
+        const textoDoArtigo = document.createTextNode(
+          " ✝️ Lorem ipsum dolor VINDO DO DOM sit amet, consectetur adipiscing elit. Aenean dignissim felis ac nisi pellentesque, non facilisis ex maximus. In in turpis dolor. ✝️"
+        );
+        botaoDoArtigo.innerHTML = "  E O BOTÃO QUE TB VEIO DE LÁ";
+        paragrafoDoArtigo.classList.add("paragrafo");
+        paragrafoDoArtigo.style.color = "purple";
+        paragrafoDoArtigo.appendChild(textoDoArtigo);
+        artigo.appendChild(paragrafoDoArtigo);
+        conteudo.style.display = "flex";
+        conteudo.style.flexDirection = "column";
+        conteudo.style.margin = "50px";
+        imagemDoArtigo.style.borderRadius = "550px";
+        imagemDoArtigo.style.margin = "30px";
+        imagemDoArtigo.style.alignItems = "center";
+        linkDoArtigo.setAttribute("href", "http://não.clique");
+        linkDoArtigo.innerHTML = "OLHA O LINK FRESQUINHO SAIDO DO DOM 🍞";
+        artigo.appendChild(imagemDoArtigo);
+        artigo.appendChild(linkDoArtigo);
+        artigo.appendChild(botaoDoArtigo);
+        conteudo.appendChild(artigo);
+      }
+      artigoDaPagina();
+      imagemDoArtigo.addEventListener("mouseout", function () {
+        imagemDoArtigo.style.height = "1000px";
+      });
+
+      imagemDoArtigo.addEventListener("mouseenter", function () {
+        imagemDoArtigo.style.height = "1200px";
+      });
+
+      function verificar() {
+        console.log(artigo.parentElement);
+        console.log(artigo.children);
+        console.log(paragrafoDoArtigo.nextSibling);
+      }
+      verificar();
+    </script>
+  </body>
+</html>
