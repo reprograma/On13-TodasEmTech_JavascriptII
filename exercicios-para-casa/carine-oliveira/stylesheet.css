@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+}
+
+div {
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+
+p {
+    margin: 15px;
+    padding-bottom: 5px;
+}
+
+img {
+    margin-left: 10%;
+    margin-bottom: 40px;
+}
+
+.link {
+    margin: 5% 40% 10% 40%;
+}
+
+.almentei {
+    width: 200px;
+    height: 200x;
+}

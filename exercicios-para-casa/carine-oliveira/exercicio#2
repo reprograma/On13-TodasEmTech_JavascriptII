@@ -1,0 +1,5 @@
+//exercicio#2
+let chamandomeuselementos = document.querySelector("div");
+console.log(chamandomeuselementos.children);
+console.log("chamandomeuselementos.parentElement");
+console.log("document.body.nextElementSibling");
