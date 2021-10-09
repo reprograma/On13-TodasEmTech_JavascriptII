@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando o DOM</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: #e4e3e3;
+        }
+
+        article {
+            display: flex;
+            width: 800px;
+            flex-direction: column;
+            margin: 0 auto;
+            margin-top: 100px;
+        }
+
+        .button {
+            color: rgb(255, 255, 255);
+            background-color: #090f1b;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(173, 33, 33, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+            transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+        }
+
+        .button:hover {
+            box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+        .paragraph {
+            color: #666;
+            line-height: 1.5;
+            text-align: justify;
+        }
+        .postImagem {
+            border-radius: 6px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <article id="article">
+        <img id="postImagem" class="postImagem" src="https://i2.wp.com/youvcode.com/wp-content/uploads/2018/07/HTML5-Doctype.png?fit=515%2C198&ssl=1" alt="Uma introdução ao DOM">
+        <p id="paragraph">DOM é a sigla em inglês para Document Object Model, que significa modelo de documento por objetos. Apesar de se tratar de um assunto complexo, ele já está embutido dentro dos navegadores. O que significa que a parte em que os programadores têm acesso é bem mais simples e fácil de manipular.
+        </p>
+        <a id="button" class="button" href="https://medium.com/@mateusdamasceno/utilizando-dom-em-javascript-4683c3b9395a">Saiba
+            mais sobre o
+            DOM</a>
+    </article> 
+    <script>
+        const postImagem = document.getElementById('postImagem');
+        const paragraph = document.getElementById('paragraph');
+        const button = document.getElementById('button');
+        const article = document.getElementById('article');
+
+        paragraph.className = "paragraph";
+        postImagem.style = "box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);";
+
+        const p = document.createElement('p');
+        p.innerHTML = "Para auxiliar o JS na tarefa de mudar o cenário web, acontece uma união de forças com o outro grande contribuinte para o acontecimento da “mágica” que vemos em nossos navegadores, o DOM.";
+        p.className = "paragraph";
+
+        button.setAttribute('href', 'https://developer.mozilla.org/pt-BR/docs/Web/API/Element/setAttribute'); 
+
+        article.appendChild(p);
+
+        //# - Exercicio 2
+        // 2.a
+        const parentArticle = article.parentElement;
+        console.log(parentArticle); // Diferença entre console.dir
+
+        // 2.b
+        const childArticle = article.childNodes;
+        console.log(childArticle);
+
+        //2.Cd
+        const nextSibling = article.nextSibling;
+        console.log(nextSibling);
+
+        postImagem.addEventListener('mouseenter', function(evento) {
+            postImagem.style = 'height: 500px; width: 900px; box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);';
+        });
+
+        postImagem.addEventListener('mouseout', function(evento) {
+            postImagem.style = 'height: auto; width: 800px;';
+        });
+
+    </script>
+</body>
+</html> 
