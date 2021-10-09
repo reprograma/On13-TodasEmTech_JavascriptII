@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="https://pbs.twimg.com/profile_images/784516442813243392/uOXmGCOW_400x400.jpg">
+            <title>{Reprograma}</title>
+    </head>
+    <style>
+        section{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .logo{
+            width: 300px;
+        }
+
+        #h{
+            font-size: 20px;
+            text-align: center;
+        }
+        #paragrafo {
+            color: rgb(58, 9, 114); 
+            text-align: center;
+            font-size: 18px;
+            margin: 0px 10px 0px 10px;
+        }
+        .a{
+            font-size: 20px;
+            text-align: center;
+        }
+    </style>
+    <body>
+        <section>
+            <img class="logo" src="./Logo_Reprograma.jpg" alt="Logo da reprograma">
+            <h1 id="h">Conheça a Reprograma!</h1><br>
+            <p id="paragrafo">A reprograma é uma iniciativa de impacto social que foca em ensinar programação para mulheres cis e trans que não têm recursos e/ou oportunidades para aprender a programar. Conheça um pouco mais sobre a reprograma no link abaixo:</p>
+            <a class="aa" href="https://reprograma.com.br/">{reprograma}</a>
+        </section>
+            <script type="text/javascript">
+            //1.
+                const section = document.getElementsByTagName("section");
+
+                const titulo = document.querySelector('#h');
+                titulo.innerHTML = "CONHEÇA A REPROGRAMA!!";
+
+                const paragrafoUni = document.getElementById('paragrafo');
+                paragrafoUni.setAttribute('class', 'paragrafoSobre');
+
+                const link = document.getElementsByClassName('aa')[0];
+                link.setAttribute('href', 'https://twitter.com/ReprogramaBr?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor');
+
+                const imagem = document.getElementsByClassName('logo')[0];
+                imagem.style.border = "5px solid purple";
+        
+
+                //2. 
+                let sessao= document.querySelector("#section")
+               // console.log(section.parentElement); //é o body
+               // console.log(section.children);  //img, h1, p, a 
+               //console.log(paragrafo.nextSibling); //aa
+
+               //3.
+                const fotona = document.querySelector('.logo');
+                fotona.addEventListener("mouseout", function(){
+                    fotona.style.width = "500px";
+                })
+
+                fotona.addEventListener("mouseenter", function () {
+                fotona.style.width = "1000px";
+                });
+            </script>
+        
+    </body>
+</html>
