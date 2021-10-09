@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sulentas </title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(rgba(224, 81, 240, 0.5), rgba(162, 14, 236, 0.7));
+        }
+        
+        .suculenta--img {
+            width: 300px;
+            margin: 50px;
+        }
+        
+        #paragrafo {
+            width: 50%;
+            color: rgb(12, 1, 10);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #3d11db;
+        }
+        
+        .classseDaMinhaSuculenta {
+            margin: 150px;
+        }
+        
+        .classseDaMinhaSuculenta :hover {
+            cursor: pointer;
+            font-size: 30px;
+            color: rgb(18, 230, 10);
+        }
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #ffff;
+        }
+        
+        img {
+            width: 300px;
+            margin: 50px;
+            border-radius: 10px;
+            border: solid 3px;
+            color: rgb(230, 49, 85);
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <h1>Eu amo <i>Sucuentas</i> , e vocês?</h1>
+        <p><i>Suculentas</i> são plantas que acumulam água em um ou mais de um dos seus tecidos e fazem isso por serem nativas de regiões secas, assim, mantêm uma reserva para os períodos sem chuva. Esse armazenamento de água acontece nas raízes, caules,
+            troncos, folhas etc. Muitas vezes elas apresentam folhas, troncos ou o caule “gordinhos”, cheios de água, daí o nome “suculenta”.</p>
+        <img class="suculenta--img" src="https://s2.glbimg.com/H-Ut1SzdVuQsgA1Me1fjEN2GEbA=/620x520/smart/e.glbimg.com/og/ed/f/original/2021/02/18/15-especies-de-suculentas-para-ter-em-casa_11.jpg" alt=" Foto da suculenta fantasma">
+        <a target="_blank" href="https://casa.abril.com.br/jardins-e-hortas/jardins-e-hortas-suculentas-tipos-cuidados-e-dicas/">Visite o site e conheça diversas variedades de Suculentas</a>
+
+    </section>
+
+    <script type="text/javascript">
+        const titulo = document.querySelector("h1");
+        titulo.style.color = "purple";
+        document.body.style.backgroundColor = "yellow"
+        let sessao = document.querySelector("section");
+        console.log(sessao.children)
+        console.log(sessao.parentchild)
+            //elemento pai:body 
+            //elemento filhos:h1,p,img,a 
+        let paragrafo1 = document.querySelector("p");
+        console.log(paragrafo1.nextSibling)
+            //elemento próximo irmão: img
+    </script>
+
+</body>
+
+</html>

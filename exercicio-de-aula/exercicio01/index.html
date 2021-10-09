@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 
+    Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    Faça uma tag  no fim do body selecione todos os elementos do html e guarde em variáveis
+    mostre o valor de <p> no console
+    mude o valor de <p> 
+    mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    adicione pelo java uma classe para o paragrafo
+-->
+
+<body>
+    <div id="treino1">oi</div>
+    <div id="treino2">ola</div>
+    <div id="treino3">hello</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus aperiam quis, corporis eaque repellat reprehenderit alias obcaecati porro voluptatum cupiditate mollitia fuga incidunt qui, quidem quam fugiat asperiores laboriosam minima.</p>
+
+
+    <script>
+        let guardarBody = document.body
+        const treinoUm = document.getElementById('treino1')
+        const treinoDois = document.getElementById('treino2')
+        const treinoTres = document.getElementById('treino')
+        let paragrafo = document.querySelector('p')
+        console.log(paragrafo)
+        paragrafo.innerHTML = "Deu certo?"
+        treinoUm.setAttribute("class", "renome")
+        treinoUm.style.backgroundColor = "salmon"
+        treinoDois.style.backgroundColor = "black"
+        treinoTres.style.backgroundColor = "blue"
+    </script>
+</body>
+
+</html>

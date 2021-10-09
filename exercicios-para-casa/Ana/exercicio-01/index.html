@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sulentas </title>
+    <style>
+        section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(rgba(224, 81, 240, 0.5), rgba(162, 14, 236, 0.7));
+        }
+        
+        .suculenta--img {
+            width: 300px;
+            margin: 50px;
+        }
+        
+        #paragrafo {
+            width: 50%;
+            color: rgb(12, 1, 10);
+            text-align: center;
+        }
+        
+        h1 {
+            color: #3d11db;
+        }
+        
+        .classseDaMinhaSuculenta {
+            margin: 150px;
+        }
+        
+        .classseDaMinhaSuculenta :hover {
+            cursor: pointer;
+            font-size: 30px;
+            color: rgb(18, 230, 10);
+        }
+        
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: #ffff;
+        }
+        
+        img {
+            width: 300px;
+            margin: 50px;
+            border-radius: 10px;
+            border: solid 3px;
+            color: rgb(230, 49, 85);
+        }
+    </style>
+</head>
+
+<body>
+    <article>
+        <h1>Eu amo <i> Sucuentas </i> , e vocês?</h1>
+        <p id="paragrafo"><i>Suculentas<i> são plantas que acumulam água em um ou mais de um dos seus tecidos e fazem isso por serem nativas de regiões secas, assim, mantêm uma reserva para os períodos sem chuva. Esse armazenamento de água acontece nas raízes, caules, troncos,
+                folhas etc. Muitas vezes elas apresentam folhas, troncos ou o caule “gordinhos”, cheios de água, daí o nome “suculenta”.</p>
+        <img class="suculenta--img" src="https://s2.glbimg.com/RaNhXXVfN8F_fsdFcGlm87iCvgQ=/620x413/smart/e.glbimg.com/og/ed/f/original/2021/04/08/planta-fantasma-2.jpg" alt=" Foto da suculenta fantasma">
+            <a target="_blank" href="https://casa.abril.com.br/jardins-e-hortas/jardins-e-hortas-suculentas-tipos-cuidados-e-dicas/">Visite o site e conheça diversas variedades de Suculentas</a>
+        
+    </article>
+    
+    
+    <script type="text/javascript">
+        const section = document.getElementsByTagName("section")[0];
+        console.log(section)
+        const paragrafo1 = document.getElementById("paragrafo");
+        console.log(paragrafo1)
+        const suculenta = document.getElementsByClassName("suculenta--img");
+        console.log(suculenta)
+        const titulo = window.document.querySelector("h1");
+        console.log(titulo)
+        const a = document.getElementsByClassName("a");
+        console.log(a) 
+
+        const titulo = document.querySelector("h1 ");
+        titulo.style.color = "purple ";
+        document.body.style.backgroundColor = "yellow "
+        
+
+        const paragrafo1 = document.getElementById("paragrafo");
+        paragrafo1.classList.add('classseDaMinhaSuculenta');
+
+        const imagem1=document.createElement('img');
+        imagem1.setAttribute('src','https://s2.glbimg.com/Xhuka05_PzEB5ha0MCaACn9AXxo=/e.glbimg.com/og/ed/f/original/2021/01/21/suculentas-pexels-quang-nguyen-vinh.jpg');
+        imagem1.setAttribute('alt','Foto de várias suculentas')
+        console.log(imagem1)
+
+        const novoLink=document.getElementsByClassName('link')[0];
+        novoLink.setAttribute('href','https://www.petz.com.br/blog/dicas/tudo-sobre-suculentas-dicas-incriveis-para-ter-a-sua-plantinha/');
+        console.log(novoLink)
+
+        let titulo=document.createElement("h1");
+        document.body.appendChild(h1);
+
+
+    
+    </script>
+
+
+
+</body>
+
+</html>

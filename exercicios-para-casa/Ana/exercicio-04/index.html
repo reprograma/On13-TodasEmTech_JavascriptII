@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Sejam bem vindos</h1>
+    <form>
+        <label for="nome">Nome completo:</label>
+        <input id="nome" type="text" name="nome" placeholder="Digite o seu nome completo">
+
+        <label for="senhaUsuario">Senha:</label>
+        <input id="senhaUsuario" type="password" name="senha" placeholder="Digite sua senha">
+        <button type="submit">Entrar</button>
+    </form>
+
+    <footer id=mensagemFinal></footer>
+
+    <script>
+        let nome = document.getElementById('nome')
+        let login = document.getElementById('senhaUsuario')
+        footer = document.getElementById('mensagemFinal')
+        let mensagem = document.createElement('p');
+        mensagem.innerText = "sem permissão"
+        mensagemFinal.appendChild(mensagem)
+
+        const hiddenMenssage = () => mensagem.style.display = "none";
+        login.onclick = hiddenMenssage
+
+
+        let messageOfClick = document.createElement('p');
+        messageOfClick.innerText = "Hello Stranger"
+        messageOfClick.style.display = "none";
+        mensagemFinal.appendChild(essageOfClick)
+
+        function showMenssage() {
+            return messageOfClick.style.display = "block"
+        }
+        login.addEventListener("submit", howMenssage)
+    </script>
+
+</body>
+
+</html>
