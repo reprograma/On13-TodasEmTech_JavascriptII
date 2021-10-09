@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 10px;
+    background-color: crimson;
+    
+    
+}
+#bodas{
+    border: violet;
+}
+
+h1{
+
+    
+    justify-content: center;
+    text-align: center;
+    
+}
+
+p {
+    color: white;
+}
+
+.autora {
+    color: #ffffff;
+    text-align: center;
+    background-color: #070707ed;
+  right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-size: 15px;
+    text-align: center;
+}
