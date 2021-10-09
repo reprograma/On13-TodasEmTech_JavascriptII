@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seu acesso</title>
+</head>
+<body>
+    <main>
+        <h1>Login</h1>
+        <form id="loginForm">
+            <label for="username">Nome do Usuário</label>
+            <input id="username" name="username" type="text" placeholder="Digite o seu nome">
+
+            <label for="password">Senha</label>
+            <input id="password" name="password" type="password" placeholder="Digite a sua senha">
+            
+            <button id="button" type="submit">Entrar</button>
+        </form>
+    </main>
+    <script>
+        const username = document.getElementById('username');
+        const password = document.getElementById('password');
+        const button = document.getElementById('button');
+        const loginForm = document.getElementById('loginForm');
+        let inputValue = '';
+
+        const notification = document.createElement('p');
+        notification.innerHTML = "Sem permissão";
+
+        loginForm.appendChild(notification);
+
+        username.addEventListener('change', function(evento){
+            inputValue = evento.target.value;
+        })
+
+        button.addEventListener('click', function(evento) {
+            evento.preventDefault();
+            notification.innerHTML = `Olá ${inputValue}`;
+            console.log(inputValue);
+        });
+    </script>
+</body>
+</html>

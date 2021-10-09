@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu tenho um DOM, e vc?</title>
+    <style>
+        section {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .beyonce--img {
+            width: 300px;
+            margin: 50px;       
+        }
+        #paragrafo {
+            width: 50%;
+            color: blue; 
+            text-align: center;
+        }
+        .classeDoMeuJavascript {
+            margin: 150px; 
+            transition: 0.5s;
+        }
+        .classeDoMeuJavascript:hover {
+            cursor: pointer; 
+            background-color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Eu tô na <i> turma 13 </i> , e tô contente</h1>
+        <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis, vitae totam, nam nulla eum culpa voluptate quasi quibusdam rerum sapiente ex aliquid perspiciatis consectetur ea. Exercitationem autem nobis veniam?</p>
+        <img class="beyonce--img" src="https://media.hugogloss.uol.com.br/uploads/2021/09/fotojet-2-14.jpg" alt="Beyonce sorrindo">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+    </section>
+    <section>
+        <div>
+        <div>
+    
+    </section>
+
+
+
+    <script type="text/javascript">
+    
+    //para saber se selecionou teste com o console.log ou console.dir
+    // selecionando o nosso elemento usando o DOM.
+    const section = window.document.getElementsByTagName("section")[0];
+      //  getElementS = [{}]
+      //  querySelectorAll = [{}]
+      //  getElement = elemento; 
+      //  querySelector = elemento;
+    const paragrafo1 = document.getElementById("paragrafo");
+    const diva = document.getElementsByClassName("beyonce--img")[0];
+    const inputNome = document.querySelector("#nome");
+    const titulo = window.document.querySelector("h1");
+        
+    // modificando valores: 
+    // .innerText pega o texto sem formatação.  .textContent pega o texto com formatação.  .innerHTML me permite modificar ou criar elementos com o html
+    titulo.innerHTML = "<p>Hoje faz sol</p> em <i> porto alegre <i>, ontem choveu";
+    // .value captura o valor do que foi escrito dentro da minha caixa de texto - input
+    inputNome.value = "Reprograma é show";
+
+    //modificando estilo:
+    titulo.style.color = "red";
+    //camelCase = letraDeCamelo
+    document.body.style.backgroundColor = "yellow";
+
+   //adicionando e removendo classes 
+    titulo.classList.add('classeDoMeuJavascript');
+    // titulo.classList.remove('classeDoMeuJavascript')
+    /*
+    Quando varios elementos são selecionados ao mesmo tempo, podemos iterar por eles.
+    for (let el of diva){
+        el.classList.remove('beyonce--img')
+    }
+    */ 
+
+    //pegando e modificando atributos
+    //console.log(diva.getAttribute('src'));
+    diva.setAttribute('src' , 'https://www.correio24horas.com.br/fileadmin/_processed_/0/b/csm_VF0720_Viola_Davis_Tout_3d988654d0.jpg');
+    diva.setAttribute("alt", "Viola Davis");
+    titulo.setAttribute("id","bananinha" );
+    </script>
+</body>
+</html>
