@@ -31,7 +31,7 @@
 
 #### 5. Dada a array(lista) abaixo, faça: 
 
-let maravilhosasDaTurma = [Aida Tavares, Aline Fank, Carol Zago, Ana Claudia,Ane Carolina, Anne Caroline, Bruna Mara, Carine, Celina, Daniele, Dardânia, Dayane , Débora, Elis, Fabiula, Gisele, Graziele, Harpya, Isabella, Vitória, Júlia, Lua, Marcela, Márcia Tadakuma, Maria Eduarda, Marina, Natália, Nayara, Priscila Karina, Quezia Guilhermina, Raquel, Sâmara, Tainá, Thamyres Lais, Valenthina Maria, Valentina, Ylana, Taiana]
+let maravilhosasDaTurma = [Aida Tavares, Aline Fank, Carol Zago, Ana Claudia,Ane Carolina, Anne Caroline, Bruna Mara, Carine, Celina, Daniele, Dardânia, Dayane , Débora, Elis, Fabiula, Gisele, Graziele, Harpya, Isabella, Vitória, Júlia, Lua, Marcela, Márcia Cristina, Maria Eduarda, Marina, Natália, Nayara, Priscila Karina, Quezia Guilhermina, Raquel, Sâmara, Tainá, Thamyres Lais, Valenthina Maria, Valentina, Ylana, Taiana]
 
 - ETAPA1: Faça uma variável que transforme todos os items da lista e os deixe em letras minúsculas; 
 - ETAPA2: Veja o número de alunas existem na lista; 
