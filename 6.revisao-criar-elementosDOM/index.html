@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisando criação com DOM</title>
+</head>
+    <style>
+        #comoDeletaEssaDiv {
+            width: 300px; height: 250px; background-color: yellow;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+
+        .minhaImagem { 
+            width: 200px; 
+            border: 3px solid red;
+            border-radius: 50%;
+        }
+    </style>
+
+<body>
+    <div id="comoDeletaEssaDiv">
+
+    </div>
+
+
+    <script type="text/javascript">
+    const divDeletada = document.querySelector("#comoDeletaEssaDiv"); //selecionando um elemento já existente 
+    const body = document.body;  
+
+    const umaImagem = document.createElement("img"); // criando um novo elemento
+    umaImagem.setAttribute("src", "https://images.tcdn.com.br/img/img_prod/799330/girassol_amarelo_alto_453_1_20200523155201.jpg"); //adicionando atributo para a variavel umaImagem
+    umaImagem.setAttribute("alt", "girassol amarelo");
+    umaImagem.classList.add("minhaImagem");
+
+
+    body.removeChild(divDeletada); // remove o elemento filhe
+    body.appendChild(divDeletada); // add elemento filhe
+    divDeletada.append(umaImagem);
+    // prepend adiciona como primeira filha, append adiciona como última
+
+    // divDeletada.append("Como um girassolllllll \n AMARELOÔO") pode fazer, mas não faça
+    
+    </script>
+</body>
+</html>

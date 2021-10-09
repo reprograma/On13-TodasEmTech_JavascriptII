@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+
+        .section {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family:'Montserrat', sans-serif;
+        }
+        #paragrafo {
+            width: 50%;
+            color: blueviolet; 
+            text-align: center;
+        }
+        .headerTitle {
+            display: flex;
+	        flex-direction: column;
+	        flex-wrap: wrap;
+	        justify-content: center;
+	        align-items: center;
+	        align-content: center;
+            color: grey;
+        }
+        .mainTitleForm {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            color: grey
+        }
+        .mainLabelInputs {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: gray;
+        }
+       </style>
+</head>
+<body>
+    <header>
+        <h1 class="headerTitle">Tudo Novo</h1>
+    </header>
+    <main>
+        <section class="mainFormArea">
+            <h1 class="mainTitleForm">Entre com o login e a senha:</h1>
+            <div class="mainPermision">
+                <form class="mainForm">
+                    <div class="mainLabelInputs">
+                        <label for="nome" class="mainLabel">Nome</label>
+                        <input id="nome" type="text" class="mainInput" placeholder="Insira o seu nome">
+                        <label for="senha" class="mainLabel">Senha</label>
+                        <input type="password" class="mainInput mainInputSenha" placeholder="Insira a sua senha">
+                        <button type="submit" name="submit" class="mainInput-btn">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="MensagemFinal"></footer>
+    <script>
+        let name = document.getElementById('nome')
+        let login = document.getElementById('login')
+        let footer = document.getElementById('MensagemFinal')
+        let mensagem = document.createElement('p')
+        message.innerText = "Sem Permissão"
+        mensagemFinal.appendChild(mensagem)
+
+        const hiddenMessage = () => mensagem.style.display = "nada";
+        login.onclick = hiddenMessage;
+
+        let messageOfClick = document.createElement('p');
+        messageOfClick.innerText = "Olá";
+        messageOfClick.style.display = "nada";
+        mensagemFinal.appendChild(messageOfClick)
+
+        
+
+        function mostrarMensagem(event) {
+            event.preventDefault()
+            return messageOfClick.style.display = "bloqueada";
+        }
+
+        login.addEventListener("submit", mostrarMensagem());
+
+    </script>
+</body>
+</html> 

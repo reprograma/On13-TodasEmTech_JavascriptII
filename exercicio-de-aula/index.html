@@ -1,0 +1,74 @@
+<!-- 
+    Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    Faça uma tag script no fim do body selecione todos os elementos do html e guarde em variáveis
+    mostre o valor de <p> no console
+    mude o valor de <p> 
+    mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    adicione pelo javascript uma classe para o paragrafo
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        section {
+            background-color: rgb(152, 108, 194);
+            height: 50vh;
+            padding: 10%;
+        }
+        section div{
+            width: 900px;
+            height: 100px;
+            margin: 2%;
+        }
+        .paragrafo1{
+            color: white;
+            font-size: 32px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+     <!-- 
+    Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    Faça uma tag script no fim do body selecione todos os elementos do html e guarde em variáveis
+    mostre o valor de <p> no console
+    mude o valor de <p> 
+    mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    adicione pelo javascript uma classe para o paragrafo
+    -->
+
+    <section>
+        <div id="pai">
+            <div id="filho1"></div>
+            <div id="filho2"></div>
+            <div id="filho3"></div>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis non, nihil minima delectus necessitatibus, laboriosam iste culpa magnam, quidem tenetur tempore eius consectetur esse sed ipsa! Illo enim aut perspiciatis?
+            </p>
+        </div>
+
+    </section>
+
+
+    <script type="text/javascript">
+
+        let html = document.querySelector('html');
+        let paragrafo = document.querySelector('p');
+        console.log(paragrafo);
+
+        paragrafo.textContent = "Hello Word!";
+
+        let div1 = document.getElementById("filho1").style.backgroundColor = "red";
+        let div2 = document.getElementById("filho2").style.backgroundColor = "blue";
+        let div3 = document.getElementById("filho3").style.backgroundColor = "white";
+
+        paragrafo.setAttribute('class', 'paragrafo1');
+
+    </script>
+</body>
+</html>
