@@ -1,0 +1,37 @@
+
+<!--Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+Faça uma tag  no fim do body selecione todos os elementos do html e guarde em variáveis
+mostre o valor de <p> no console
+mude o valor de <p> 
+mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+adicione pelo java uma classe para o paragrafo-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="treino1">oiiiiii </div>
+    <div id="treino2"> oiii</div>
+    <div id="treino3">oiiiii</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus alias, recusandae sapiente veniam ullam omnis magni quam eos laborum. Atque laborum, a officiis veniam fugiat dolores veritatis voluptate in aut.</p>
+<script>
+    let guardarBody= document.body
+    const treinoUm= document.getElementById('treino1')
+    const treinoDois= document.getElementById('treino2') 
+    const treinoTres= document.getElementById('treino3')
+    let paragrafo=document.querySelector('p')
+    console.log(paragrafo)
+    paragrafo.innerText="oi será que deu certo?"
+    treinoUm.setAttribute("class", 'renome')
+    treinoUm.style.backgroundColor="pink"
+    treinoDois.style.backgroundColor="black"
+    treinoTres.style.backgroundColor="yellow"
+    treinoUm.style.fontSize="40px"
+</script>
+</body>
+</html>
