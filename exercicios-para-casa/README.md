@@ -5,7 +5,7 @@
 
 
 #### 1. Use o DOM para realizar alterações na sua página:
-- ETAPA1: Crie um documento HTML que contenha um `título` e um `artigo`, e dentro desse artigo deve haver pelo menos: `um parágrafo`, `uma imagem` e `um link <a>`. (O tema do artigo fica sob escolha da aluna);
+- ETAPA1: Crie um documento HTML que contenha um `título` e um `artigo`, e dentro desse artigo deve haver pelo menos: `um parágrafo`, `uma imagem` e `um link <a>`. (O tema do artigo fica sob escolha da aluna); 
 - ETAPA2: (OPCIONAL) Dê um estilo para o seu HTML; 
 - ETAPA3: Crie uma variável para armazenar cada um dos seus elementos HTML no javascript;
 - ETAPA4: Adicione uma `classe` para o seu elemento de parágrafo usando o DOM;
