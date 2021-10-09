@@ -1,0 +1,44 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+  text-align: center;
+  font-size: 2.1em;
+  padding: 0.4em;
+  background-color: rgba(19, 245, 68, 0.582);
+  color:rgba(52, 53, 47, 0.74);
+  box-shadow: 0px  10px 10px #88888825;
+
+}
+
+
+article{
+  width: 90vw;
+  margin: 0.5em auto;
+  padding: 0 5em;
+  text-align: justify;
+  background-color: rgba(206, 231, 191, 0.295);
+  box-shadow: 0px  10px 10px #88888863;
+
+}
+
+img{
+  height: 25vw;
+  margin: 1% 27%;
+  border-radius: 10px;
+}
+
+p{
+  padding-bottom: 1%;
+  font-size: 20px;
+  color: rgba(7, 29, 5, 0.582);
+}
+
+a{
+  text-decoration: none;
+  color: rgba(26, 105, 19, 0.582);
+}

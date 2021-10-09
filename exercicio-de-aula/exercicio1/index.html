@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<!-- 
+  </head>
+  <!-- 
     Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
     Faça uma tag script no fim do body selecione todos os elementos do html e guarde em variáveis
     
@@ -15,11 +15,39 @@
     mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
     adicione pelo javascript uma classe para o paragrafo
 -->
-<body>
-    
+  <body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <p id="paragrafo"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet pariatur sed libero fugit doloribus velit illum tenetur ea? Libero, ipsa?</p>
 
     <script>
-        
+
+            const pegarBodyInteiro = document.body;
+
+            const primeiraDiv = document.getElementById("div1");
+            const segundaDiv = document.getElementById("div2");
+            const terceiraDiv = document.getElementById("div3");
+
+            
+            const textoParagrafo = document.querySelector("p");
+
+            console.log(textoParagrafo);
+
+            paragrafo.innerHTML = "<p>Flores de outono</p> <i> cores de primavera <i>, luzes de verão";
+
+            div1.style.height = "2em";
+            div2.style.height = "2em";
+            div3.style.height = "2em";
+
+            div1.style.backgroundColor = "pink";
+            div2.style.backgroundColor = "gray";
+            div3.style.backgroundColor = "blue";
+
+            paragrafo.classList.add('classeParagrafo');
+
     </script>
-</body>
+  </body>
 </html>
+
