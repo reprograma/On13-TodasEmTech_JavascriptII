@@ -13,7 +13,7 @@ function submit(evento) {
     const total = num1Value + num2Value;
     let resultado = document.createElement('p');
     caixaResultado.appendChild(resultado);
-    resultado.innerText = `o resutado de ${num1Value} + ${num2Value} é = ${total}`
+    resultado.innerText = `o resultado de ${num1Value} + ${num2Value} é = ${total}`
     
 }
 

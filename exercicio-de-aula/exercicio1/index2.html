@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bruxona do DOM</title>
+</head>
+
+<!-- crie um html c 3 divs vazias e um paragrafo c texto -->
+<!-- faça uma tag script no fim de body  e selecione todos os elementos do html e guarde em variaveis
+guarde o valor de <p> no console
+mude o valor de <p>
+mude o estilo das divs para que cada uma tenha uma caixa com uma cor diferente
+adicione pelo javascript uma classe para o paragrafo -->
+<body>
+    
+<div id= "div1"> TEXTO 1 </div>
+<div id="div2"> a </div>
+<div id="div3">a </div>
+
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis hic, blanditiis iste obcaecati tempore nesciunt tempora sequi numquam nemo qui. Ipsum harum blanditiis minima quas amet! Beatae consectetur quod aut. </p>
+
+<script>
+
+let guardarBody = document.body
+const guardarDiv1= document.getElementById('div1')
+const guardarDiv2= document.getElementById('div2')
+const guardarDiv3= document.getElementById('div3')
+
+let paragrafo = document.querySelector('p')
+console.log(paragrafo)
+
+paragrafo.innerHTML = "<p> Hoje a noite não tem luar </p>"
+guardarDiv1.style.backgroundColor = "red";
+guardarDiv2.style.backgroundColor = "blue";
+guardarDiv3.style.backgroundColor = "yellow";
+
+paragrafo.classList.add('classeDoParagrafo');
+
+
+
+</script>
+
+
+</body>
+</html>
