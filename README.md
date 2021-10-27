@@ -12,29 +12,29 @@ Vamos aprender ou retomar nessa semana:
 - [Arrow functions - funções de flecha -](#function)
 - [Árvore DOM](#tree)
 - [Selecionando elementos no HTML](#select)
-    - [ ]  .getElementById 
-    - [ ]  .getElementsByClassName
-    - [ ]  .getElementsByTagName 
-    - [ ]  .querySelector 
-    - [ ]  .querySelectorAll  
+    - [x]  .getElementById 
+    - [x]  .getElementsByClassName
+    - [x]  .getElementsByTagName 
+    - [x]  .querySelector 
+    - [x]  .querySelectorAll  
 - [Manipulando conteúdo](#changingContent)
-    - [ ]  .textContent
-    - [ ]  .innerText
-    - [ ]  .innerHTML
-    - [ ]  .value (inputs)
+    - [x]  .textContent
+    - [x]  .innerText
+    - [x]  .innerHTML
+    - [x]  .value (inputs)
 - [Alterando estilos](#changingStyle)
-    - [ ]  .style.property (camelCase)
-    - [ ]  .classList
-        - [ ]  .add()
-        - [ ]  .remove()
+    - [x]  .style.property (camelCase)
+    - [x]  .classList
+        - [x]  .add()
+        - [x]  .remove()
         - [ ]  .toggle()
 - [Trabalhando com propriedades dos elementos](#elementProps)  
-    - [ ]  .setAtrribute()
-    - [ ]  .getAtrribute()
+    - [x]  .setAtrribute()
+    - [x]  .getAtrribute()
     - [ ]  .removeAttribute() 
 - [Criando elementos, inserindo e removendo no HTML](#createElement)
-    - [ ]  .createElement() - criar
-    - [ ]  .append() / .appendChild() - inserir
+    - [x]  .createElement() - criar
+    - [x]  .append() / .appendChild() - inserir
     - [ ]  .prepend() - inserir
     - [ ]  .remove() / .removeChild() - remover
 - [Navegando pelos elementos](#navigateElements)
@@ -42,8 +42,8 @@ Vamos aprender ou retomar nessa semana:
     - [ ]  Children (.children, .childNodes, .firstElementChild, .lastChild) 
     - [ ]  Siblings (.nextSibling, .nextElementSibling,  .previousSibling, .previousElementSibling )
 - [Funções de eventos](#event)
-    - [ ]  Com a `chamada` direto no HTML
-    - [ ]  .addEventListener() 
+    - [x]  Com a `chamada` direto no HTML
+    - [x]  .addEventListener() 
         - [Tipos de eventos - Site MDN](https://developer.mozilla.org/pt-BR/docs/Web/Events) 
         - event.preventDefault() - em formulários -
 - [links úteis](#links)
