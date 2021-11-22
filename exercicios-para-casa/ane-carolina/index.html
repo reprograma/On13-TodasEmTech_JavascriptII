@@ -1,0 +1,142 @@
+<!-- #### 1. Use o DOM para realizar alterações na sua página:
+- ETAPA1: Crie um documento HTML que contenha um `título` e um `artigo`, e dentro desse artigo deve haver pelo menos: `um parágrafo`, `uma imagem` e `um link <a>`. (O tema do artigo fica sob escolha da aluna);
+- ETAPA2: (OPCIONAL) Dê um estilo para o seu HTML; 
+- ETAPA3: Crie uma variável para armazenar cada um dos seus elementos HTML no javascript;
+- ETAPA4: Adicione uma `classe` para o seu elemento de parágrafo usando o DOM;
+- ETAPA5: Crie ou modifique o `estilo` da sua imagem usando o DOM;     
+- ETAPA6: Modifique o valor do atributo `href` do seu link utilizando os DOM;
+- ETAPA7: Crie um novo elemento HTML utilizando o DOM e o adicione ao seu HTML.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> DOM DAS S_FADAS </title>
+
+    <style>
+        article {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgba(235, 188, 232, 0.61) ;
+        }
+        .chinchila--img {
+            width: 300px;
+            margin: 20px;       
+        }
+
+        .chinchila-2 {
+            width: 300px;
+            margin: 20px;       
+        }
+
+        p{
+            width: 50%;
+            text-align: center;
+        }
+        a{
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <article>
+
+        <p>Ela é um roedor tranquilo, simpático, de baixo custo de manutenção e ideal para quem vive em apartamentos. Já conhece a chinchila? </p>
+        <img class="chinchila--img" src="https://i.pinimg.com/550x/22/30/54/22305418269cbc153015646ab1b2e54d.jpg" alt="chinchila-cinza">
+        <a href="https://www.petz.com.br/blog/saude-e-cuidados/chinchila-cuidados-7-passos-essenciais-para-garantir-o-bem-estar-desse-roedor/"> O que é uma chinchila? Clique para saber mais! </a>
+
+    </article>
+
+    <!-- <--  - ETAPA3: Crie uma variável para armazenar cada um dos seus elementos HTML no javascript;
+    - ETAPA4: Adicione uma `classe` para o seu elemento de parágrafo usando o DOM;
+    - ETAPA5: Crie ou modifique o `estilo` da sua imagem usando o DOM;     
+    - ETAPA6: Modifique o valor do atributo `href` do seu link utilizando os DOM;
+    - ETAPA7: Crie um novo elemento HTML utilizando o DOM e o adicione ao seu HTML.  -->
+
+    <script type="text/javascript"> 
+
+//criando variaveis
+    const artigo = document.querySelector("article");
+    const paragrafo = document.querySelector("p");
+    const imagem = document.getElementsByClassName("chinchila--img")[0];
+    const link = document.querySelector("a");
+
+    //adicionando classe p paragrafo
+
+        paragrafo.classList.add('classeParagrafo');
+       // console.log(paragrafo);
+
+        //mudando estilo da imagem
+        imagem.setAttribute("style", "padding: 15px; background-color: yellow");
+        
+        //console.log(imagem);
+
+
+        //mudando href
+        link.setAttribute('href', 'https://blog.casadoprodutor.com.br/como-cuidar-de-uma-chinchila/')
+        
+
+        //criando novo html 
+
+        // let imagem2 = document.createElement('imagem2');
+        // imagem.appendChild(imagem2);
+
+        // console.log(imagem);
+        // imagem2.classList.add('chinchila-2');
+        // imagem2.setAttribute('src' , 'https://www.correio24horas.com.br/fileadmin/_processed_/0/b/csm_VF0720_Viola_Davis_Tout_3d988654d0.jpg');
+
+        // // const img2 = document.getElementsByClassName("chinchila-2")[0];
+
+        // // img2.setAttribute("style", "width: 300px;margin: 20px");
+
+
+
+        
+        // //  'https://i1.wp.com/blog.tudodebicho.com.br/wp-content/uploads/2020/12/chinchila-saude-1.gif?resize=220%2C220&ssl=1')
+
+        let input1 = document.createElement('input');
+        artigo.appendChild(input1);
+        input1.value=" hoje tem hein ";
+
+        // console.log(artigo.input1);
+
+//         #### 2. Utilizando o mesmo HTML do exercício 1, diga(`mostrando com o console.log() ou console.dir()`): 
+// - Quem é o elemento `pai/mãe` do seu artigo? 
+// - Quem são os elementos `filhes` do seu artigo? 
+// - Qual elemento é o `próximo irmão` do elemento parágrafo?
+
+        console.log(`o elemento pai de artigo é`, artigo.parentElement);
+        
+        console.log(`os elementos filhos de artigo é`, artigo.children);
+
+        
+        console.log(`o proximo irmao de paragrafo é`, paragrafo.nextElementSibling);
+
+        // <!-- #### 3. Utilizando o mesmo HTML do exercício 1, faça uma `função de evento` que aumente o tamanho da minha imagem quando eu passar o mouse por cima dela e que quando eu retirar o meu mouse de cima da imagem ela retorne ao tamanho original; -->
+
+        imagem.addEventListener('mouseover', function (passada) {
+
+            imagem.style.width = "450px";
+            return passada;
+            
+});
+
+imagem.addEventListener('mouseout', function (passada) {
+
+imagem.style.width = "300px";
+return passada;
+
+});
+    </script>
+
+
+
+
+</body>
+</html>  
