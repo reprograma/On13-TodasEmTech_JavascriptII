@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atv. 4</title>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <form>
+        <label>Name</label>
+        <input type="name" id="name">
+        <label> password</label>
+        <input type="password" id="password">
+        <input type="button" value="login" id="login" onclick="">
+    </form>
+    <footer id="finalmessage"></footer>
+
+    <script>
+        let name = document.getElementById('name')
+        let login = document.getElementById('login')
+        let footer = document.getElementById('finalmessage')
+        let message = document.createElement('p');
+        message.innerText = "not allowed"
+        finalmessage.appendChild(message)
+
+        const hiddenMessage = () => message.style.display = "none";
+
+        let messageOfClick = document.createElement('p');
+        messageOfClick.innerText = `Hello Stranger`
+        messageOfClick.style.visibility = "hidden"
+        finalmessage.appendChild(messageOfClick)
+
+
+        function showMessage() {
+            hiddenMessage()
+            messageOfClick.style.visibility = "visible"
+        }
+
+
+        login.addEventListener("click", showMessage)
+
+    </script>
+</body>
+
+</html>

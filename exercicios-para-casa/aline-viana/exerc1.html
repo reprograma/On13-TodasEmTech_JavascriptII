@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <article id="fullParagraph">
+        <p class="firstParagraph"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea eaque totam, tempore,
+            ipsa atque magni dignissimos
+            non doloribus reprehenderit ipsam ducimus harum ut quae nobis veritatis. Ex odit eaque voluptatibus.</p>
+    </article>
+    <img class="nature"
+        src="https://images.unsplash.com/photo-1633479585706-69b9f3cc34aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"
+        alt="paisagem">
+    <a class="link" href="https://unsplash.com/">Free Photos</a>
+    <script>
+        let text = document.getElementById('fullParagraph')
+        text.classList.add('littleText');
+        let paragraph = document.getElementsByClassName('firstParagraph')
+
+
+        let image = document.getElementsByClassName('nature')
+
+        const newLink = document.getElementsByClassName('link')[0]
+        newLink.setAttribute('href', 'https://www.google.com/search?q=free+photos&ei=v-FdYZreH5Xe1sQPyIGPWA&ved=0ahUKEwjauZKvrLbzAhUVr5UCHcjAAwsQ4dUDCA4&uact=5&oq=free+photos&gs_lcp=Cgdnd3Mtd2l6EAMyBQgAEJECMgUIABCRAjIFCAAQkQIyBQgAEJECMgUIABCABDIFCAAQgAQyBQgAEIAEMgUIABCABDIFCAAQgAQyBQgAEIAEOgcIABBHELADOgQIABBHSgQIQRgAUKcJWLELYKcMaABwA3gAgAG2AogBtgKSAQMzLTGYAQCgAQHIAQjAAQE&sclient=gws-wiz');
+        newLink.style.color = "red";
+
+        let linkFrePhotos = document.getElementsByTagName('a')
+
+        let newItem = document.createElement("p");
+        newItem.innerText = "ola"
+        fullParagraph.appendChild(newItem)
+
+        // atividade 3
+        image.addEventListener("mouseover", imageGonnaBeLargeWhenMouseOver)
+        image.addEventListener("mouseout", imageNormalSize)
+
+        function imageGonnaBeLargeWhenMouseOver() {
+            image.style.width = "800px";
+        }
+        function imageNormalSize() {
+            image.style.width = "464px"
+        }
+
+    </script>
+</body>
+
+</html>
+
+
+<!-- 
+    1) Quem é o elemento pai/mãe do seu artigo?
+    firstChild: text
+    2) Quem são os elementos filhes do seu artigo?
+    firstElementChild: p.firstParagraph
+
+    3) Qual elemento é o próximo irmão do elemento parágrafo?
+    img.nature
+-->
