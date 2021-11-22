@@ -46,4 +46,11 @@ let cancoes = {
     banda: "Dingo Bells", 
     musicas: ['Eu vim passear', 'Mistério dos Trinta'], 
 }
+<<<<<<< HEAD
 //console.log(cancoes.musicas[1]);
+
+
+
+=======
+//console.log(cancoes.musicas[1]);
+>>>>>>> bb7ff0c8479c0086352cb90ddb4d180b3d90826f

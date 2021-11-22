@@ -1,0 +1,812 @@
+Esse é o dontpad da turma online 13, use e abuse, escreva logo abaixo de cada tópico aqui:
+>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+
+DÚVIDAS-------------------------------------------------------------------------------------?
+
+
+
+
+
+
+SUGESTÕES-------------------------------------------------------------------------------- ;)
+
+
+
+
+
+
+EXERCICIOS EM AULA ---------------------------------------------------------------- !important
+
+1 - 
+<!-- 
+    Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    Faça uma tag  no fim do body selecione todos os elementos do html e guarde em variáveis
+    mostre o valor de <p> no console
+    mude o valor de <p> 
+    mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    adicione pelo java uma classe para o paragrafo
+-->
+
+
+
+
+
+FIDI-BÉQUIS(SOBRE A AULA)--------------------------------------------------------- !?
+;só no fim da aula essa parte; !important
+
+FOI BOM: a dinamica da aula é maravilhosa, aula super leve
+Foi maravilhoso, compreendi melhor o javascript 
+
+
+
+Seu ensino é otimo! Clareou algumas coisas e deu pra entender bem o
+FOI RUIM: 
+
+PODE MELHORAR:
+ 
+
+
+CÓDIGOS FEITOS EM AULA------------------------------------------------------------- < />
+
+
+Brincando com Eventos
+const caixa = document.querySelector('#caixa');
+//const botao = document.getElementById('btn');
+const botao = document.querySelector('#btn');
+
+
+botao.addEventListener('click', function (){
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src','https://noticias.buscavoluntaria.com.br/wp-content/uploads/2019/03/kitten-solid-white-cat-motherless-child.jpg');
+    imagem.setAttribute('alt', 'gato fofo escalando');
+    imagem.style.width = "250px";
+    imagem.style.margin = "20px";
+    return caixa.append(imagem);
+})
+
+
+//const poke = copia y cola  https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json
+
+function mapeandoPokemon (elemento) {
+    let imagemPoke = document.createElement("img");
+    let nomePoke = document.createElement("span");
+    
+    imagemPoke.setAttribute("src", elemento.img);
+    imagemPoke.setAttribute("alt", elemento.name);
+
+    nomePoke.textContent = elemento.name;
+
+    caixa.appendChild(imagemPoke);
+    caixa.appendChild(nomePoke);
+}
+
+poke.pokemon.map(mapeandoPokemon)
+
+
+
+
+
+
+
+
+CreateElement e Formulários
+
+index.html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement e formulário</title>
+    < defer type="text/java" src="./.js"></>
+</head>
+<body>
+    <form >
+        <label for="num1">Número 1</label>
+        <input type="number" name="num1" id="num1" >
+        <label for="num2">Número 2</label>
+        <input type="number" name="num2" id="num2">
+        <button type="submit" > Somar </button>
+    </form>
+    <div id="caixaResultado">
+        
+    </div>
+</body>
+</html>
+
+
+
+SCRIPT.JS ----
+
+const formulario = document.querySelector("form");
+const inputUm = document.querySelector("#num1");
+const inputDois = document.querySelector("#num2");
+const botaoForm = document.querySelector("form button");
+const caixaResultado = document.querySelector("#caixaResultado");
+
+
+function submit(evento) {
+    evento.preventDefault();
+    
+    const num1Value = Number(inputUm.value);
+    const num2Value = Number(inputDois.value); 
+    //console.log("numero 1: ", num1Value, "\n numero 2: ", num2Value  )
+    const total = num1Value + num2Value;
+    let resultado = document.createElement('p');
+    caixaResultado.appendChild(resultado);
+    resultado.innerText = `o resutado de ${num1Value} + ${num2Value} é = ${total}`
+}
+
+formulario.addEventListener("submit", submit);
+
+
+
+
+------Conceitos básicos de seleção e manipulação do DOM ----
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu tenho um DOM, e vc?</title>
+    <style>
+        section {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .beyonce--img {
+            width: 300px;
+            margin: 50px;       
+        }
+        #paragrafo {
+            width: 50%;
+            color: blue; 
+            text-align: center;
+        }
+        .classeDoMeuJava {
+            margin: 150px; 
+            transition: 0.5s;
+        }
+        .classeDoMeuJava:hover {
+            cursor: pointer; 
+            background-color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Eu tô na <i> turma 13 </i> , e tô contente</h1>
+        <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis, vitae totam, nam nulla eum culpa voluptate quasi quibusdam rerum sapiente ex aliquid perspiciatis consectetur ea. Exercitationem autem nobis veniam?</p>
+        <img class="beyonce--img" src="https://media.hugogloss.uol.com.br/uploads/2021/09/fotojet-2-14.jpg" alt="Beyonce sorrindo">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+    </section>
+    <section>
+        <div>
+        <div>
+    
+    </section>
+
+
+
+    < type="text/java">
+    
+    //para saber se selecionou teste com o console.log ou console.dir
+    // selecionando o nosso elemento usando o DOM.
+    const section = window.document.getElementsByTagName("section")[0];
+      //  getElementS = [{}]
+      //  querySelectorAll = [{}]
+      //  getElement = elemento; 
+      //  querySelector = elemento;
+    const paragrafo1 = document.getElementById("paragrafo");
+    const diva = document.getElementsByClassName("beyonce--img")[0];
+    const inputNome = document.querySelector("#nome");
+    const titulo = window.document.querySelector("h1");
+        
+    // modificando valores: 
+    // .innerText pega o texto sem formatação.  .textContent pega o texto com formatação.  .innerHTML me permite modificar ou criar elementos com o html
+    titulo.innerHTML = "<p>Hoje faz sol</p> em <i> porto alegre <i>, ontem choveu";
+    // .value captura o valor do que foi escrito dentro da minha caixa de texto - input
+    inputNome.value = "Reprograma é show";
+
+    //modificando estilo:
+    titulo.style.color = "red";
+    //camelCase = letraDeCamelo
+    document.body.style.backgroundColor = "yellow";
+
+   //adicionando e removendo classes 
+    titulo.classList.add('classeDoMeuJava');
+    // titulo.classList.remove('classeDoMeuJava')
+    /*
+    Quando varios elementos são selecionados ao mesmo tempo, podemos iterar por eles.
+    for (let el of diva){
+        el.classList.remove('beyonce--img')
+    }
+    */ 
+
+    //pegando e modificando atributos
+    //console.log(diva.getAttribute('src'));
+    diva.setAttribute('src' , 'https://www.correio24horas.com.br/fileadmin/_processed_/0/b/csm_VF0720_Viola_Davis_Tout_3d988654d0.jpg');
+    diva.setAttribute("alt", "Viola Davis");
+    titulo.setAttribute("id","bananinha" );
+    </>
+</body>
+</html>
+
+
+
+
+----------REVISAO: .js-------------
+// const let var
+
+let nome = "Aida"; 
+//variavel let , recebe como valor uma string 
+let nomes = [
+    {
+        pais: "Brasil",
+        nome: "Aida",
+    },
+     "Quezia", "Fabiula", "Taiane", "Carol", 2, true];
+// valor de lista - array
+//console.log(nomes[0].pais); // primeiro item da lista com a propriedade pais
+//console.log(nomes);
+nomes.push('Nayara');
+//console.log(nomes);
+
+
+nomes.filter(function (elemento){
+   //console.log(elemento.pais)
+})
+/*
+const retornaNome = function( elemento, indice, array) {
+    return console.log(indice)
+}
+*/
+/*
+const retornaNome = (elemento, indice, array) => {
+    return console.log(elemento, indice, array)
+} 
+*/
+/*
+arrow function
+minhaFuncao() => {} 
+function minhaFuncao() {}
+
+nomes.map((item, index) =>  {
+    if(item == "Quezia"){
+        console.log(item, index)
+    }
+})
+*/
+
+// map e filter são funções de callback - 
+
+let cancoes = {
+    banda: "Dingo Bells", 
+    musicas: ['Eu vim passear', 'Mistério dos Trinta'], 
+}
+//console.log(cancoes.musicas[1]);
+
+
+
+
+Esse é o dontpad da turma online 13, use e abuse, escreva logo abaixo de cada tópico aqui:
+>>>>>>>>>>>>>>>>>>>>>>>>>><<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+ DÚVIDAS-------------------------------------------------------------------------------------?
+callback
+
+
+
+
+
+
+
+SUGESTÕES-------------------------------------------------------------------------------- ;)
+
+dificuldade de usar o dom na parte de eventos, surgiu a duvida nos exercícios para casa
+NESSE PARTE  AQUI:
+ETAPA4: 
+Adicione um evento para que após a usuária clique no botão com o texto entrar, o novo elemento tenha o seu texto de "Sem permissão" substituído por: Olá + o nome da pessoa
+
+
+
+
+EXERCICIOS EM AULA ---------------------------------------------------------------- !important
+
+1 - 
+<!-- 
+    Crie um HTML com três divs vazias e um parágrafo com texto. Cada div com um id 
+    Faça uma tag  no fim do body selecione todos os elementos do html e guarde em variáveis
+    mostre o valor de <p> no console
+    mude o valor de <p> 
+    mude o estilo das divs para que cada uma seja uma caixa com uma cor diferente
+    adicione pelo java uma classe para o paragrafo
+-->
+
+
+
+
+
+FIDI-BÉQUIS(SOBRE A AULA)--------------------------------------------------------- !?
+;só no fim da aula essa parte; !important
+
+FOI BOM:
+a dinamica da aula é maravilhosa, aula super leve
+Foi maravilhoso, compreendi melhor o java 
+PERFE
+Aula leve, dinamica, quero Liana minha amigaaaaa <3
+Gostei muito da didática, super explicadinho….
+
+Gostei muito do começo da aula com a troca. Liana ❤❤❤❤❤
+
+A única professora que deu feedback dos exercícios da semana passada!
+
+Seu ensino é otimo! Clareou algumas coisas e deu pra entender bem o
+FOI RUIM: 
+
+PODE MELHORAR:
+ 
+
+
+CÓDIGOS FEITOS EM AULA------------------------------------------------------------- < />
+
+
+Revisão com eventos -------------- .js
+const divEvento = document.querySelector("#evento");
+const formulario = document.querySelector("form");
+const input = document.querySelector("#bomDia");
+
+
+formulario.addEventListener("submit",function( evento){
+    evento.preventDefault();
+
+    const inputValor = input.value;
+    let printarNaTela = document.createElement("p"); 
+    printarNaTela.textContent = inputValor;
+    
+    document.body.append(printarNaTela); 
+})
+
+
+
+
+
+divEvento.addEventListener("click", function(){
+    //quando eu clicar na minha div evento, ela fique colorada que nem eu
+    return divEvento.style.backgroundColor = "red";
+} )
+
+
+// forma com a funcao fora do addEventListener
+function azulzinho() {
+    divEvento.style.backgroundColor = "blue";
+    divEvento.classList.remove("aumentei");
+}
+divEvento.addEventListener("mouseleave", azulzinho);
+
+
+// com a função dentro
+divEvento.addEventListener("mouseenter", function(){
+    divEvento.style.backgroundColor = "green";
+    divEvento.classList.add("aumentei");
+})
+
+
+---------------------------index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revendo eventos</title>
+    < defer type="text/java" src="./.js"></>
+</head>
+    <style>
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            transition: 0.7s;
+        }
+
+        .aumentei {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+<body>
+    <div id="evento">
+
+    </div>
+
+    <form type="blabla">
+        <label for="bomDia">Que dia é hoje</label>
+        <input type="text" id="bomDia" name="bomDia" placeholder="que dia é hoje? ">
+        <button type="submit" id="submit" name="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+
+Revisão - criando, deletando, adicionando, mexendo em atributos do DOM  ------ index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisando criação com DOM</title>
+</head>
+    <style>
+        #comoDeletaEssaDiv {
+            width: 300px; height: 250px; background-color: yellow;
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+        }
+
+        .minhaImagem { 
+            width: 200px; 
+            border: 3px solid red;
+            border-radius: 50%;
+        }
+    </style>
+
+<body>
+    <div id="comoDeletaEssaDiv">
+
+    </div>
+
+
+    < type="text/java">
+    const divDeletada = document.querySelector("#comoDeletaEssaDiv"); //selecionando um elemento já existente 
+    const body = document.body;  
+
+    const umaImagem = document.createElement("img"); // criando um novo elemento
+    umaImagem.setAttribute("src", "https://images.tcdn.com.br/img/img_prod/799330/girassol_amarelo_alto_453_1_20200523155201.jpg"); //adicionando atributo para a variavel umaImagem
+    umaImagem.setAttribute("alt", "girassol amarelo");
+    umaImagem.classList.add("minhaImagem");
+
+
+    body.removeChild(divDeletada); // remove o elemento filhe
+    body.appendChild(divDeletada); // add elemento filhe
+    divDeletada.append(umaImagem);
+    // prepend adiciona como primeira filha, append adiciona como última
+
+    // divDeletada.append("Como um girassolllllll \n AMARELOÔO") pode fazer, mas não faça
+    
+    </>
+</body>
+</html>
+
+
+
+
+
+Mães, filhas, irmãs ----------- index.html
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent, child, sibiling</title>
+  </head>
+  <body style="margin: 0">
+      <div style="padding: 20px">
+
+          <section id="section">
+              <p class="paragrafo"><strong>Olá </strong> mundo</p>
+              <p class="paragrafo">Tudo legal turma?</p>
+          </section>
+            
+        </div>
+
+
+    < type="text/java">
+//children = filhes, sibiling = irmã/irmão , parent = pais/mães
+
+let sessao = document.querySelector("#section")
+// console.log(sessao.children) // mostra objeto com os elementos filhos
+// console.log(sessao.parentElement) // mosta o pai/mae do elemento
+// console.log(document.body.previousElementSibling) // mostra elemento irmão/irmã anterior
+    
+sessao.style.backgroundColor = "yellow";        
+sessao.parentElement.style.backgroundColor = "pink";
+    
+    </>
+
+  </body>
+</html>
+
+
+Brincando com Eventos
+
+index.html ----------
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brincando com eventos</title>
+    < src="./.js" defer type="text/java"></>
+</head>
+<body>
+    <h1>Brincando com eventos</h1>
+    <button id="btn">Adiciona a gatinhe</button>
+    <div id="caixa"></div>
+</body>
+</html>
+
+
+.js -------
+
+const caixa = document.querySelector('#caixa');
+//const botao = document.getElementById('btn');
+const botao = document.querySelector('#btn');
+
+
+botao.addEventListener('click', function (){
+    let imagem = document.createElement('img');
+    imagem.setAttribute('src','https://noticias.buscavoluntaria.com.br/wp-content/uploads/2019/03/kitten-solid-white-cat-motherless-child.jpg');
+    imagem.setAttribute('alt', 'gato fofo escalando');
+    imagem.style.width = "250px";
+    imagem.style.margin = "20px";
+    return caixa.append(imagem);
+})
+
+
+//const poke = copia y cola  https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json
+
+function mapeandoPokemon (elemento) {
+    let imagemPoke = document.createElement("img");
+    let nomePoke = document.createElement("span");
+    
+    imagemPoke.setAttribute("src", elemento.img);
+    imagemPoke.setAttribute("alt", elemento.name);
+
+    nomePoke.textContent = elemento.name;
+
+    caixa.appendChild(imagemPoke);
+    caixa.appendChild(nomePoke);
+}
+
+poke.pokemon.map(mapeandoPokemon)
+
+
+
+
+
+
+
+
+CreateElement e Formulários
+
+index.html 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateElement e formulário</title>
+    < defer type="text/java" src="./.js"></>
+</head>
+<body>
+    <form >
+        <label for="num1">Número 1</label>
+        <input type="number" name="num1" id="num1" >
+        <label for="num2">Número 2</label>
+        <input type="number" name="num2" id="num2">
+        <button type="submit" > Somar </button>
+    </form>
+    <div id="caixaResultado">
+        
+    </div>
+</body>
+</html>
+
+
+
+.JS ----
+
+const formulario = document.querySelector("form");
+const inputUm = document.querySelector("#num1");
+const inputDois = document.querySelector("#num2");
+const botaoForm = document.querySelector("form button");
+const caixaResultado = document.querySelector("#caixaResultado");
+
+
+function submit(evento) {
+    evento.preventDefault();
+    
+    const num1Value = Number(inputUm.value);
+    const num2Value = Number(inputDois.value); 
+    //console.log("numero 1: ", num1Value, "\n numero 2: ", num2Value  )
+    const total = num1Value + num2Value;
+    let resultado = document.createElement('p');
+    caixaResultado.appendChild(resultado);
+    resultado.innerText = `o resutado de ${num1Value} + ${num2Value} é = ${total}`
+}
+
+formulario.addEventListener("submit", submit);
+
+
+
+
+------Conceitos básicos de seleção e manipulação do DOM ----
+index.html
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu tenho um DOM, e vc?</title>
+    <style>
+        section {
+            display: flex; 
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .beyonce--img {
+            width: 300px;
+            margin: 50px;       
+        }
+        #paragrafo {
+            width: 50%;
+            color: blue; 
+            text-align: center;
+        }
+        .classeDoMeuJava {
+            margin: 150px; 
+            transition: 0.5s;
+        }
+        .classeDoMeuJava:hover {
+            cursor: pointer; 
+            background-color: #fff; 
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Eu tô na <i> turma 13 </i> , e tô contente</h1>
+        <p id="paragrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi officiis, vitae totam, nam nulla eum culpa voluptate quasi quibusdam rerum sapiente ex aliquid perspiciatis consectetur ea. Exercitationem autem nobis veniam?</p>
+        <img class="beyonce--img" src="https://media.hugogloss.uol.com.br/uploads/2021/09/fotojet-2-14.jpg" alt="Beyonce sorrindo">
+        <label for="nome">Nome: </label>
+        <input type="text" name="nome" id="nome">
+    </section>
+    <section>
+        <div>
+        <div>
+    
+    </section>
+
+
+
+    < type="text/java">
+    
+    //para saber se selecionou teste com o console.log ou console.dir
+    // selecionando o nosso elemento usando o DOM.
+    const section = window.document.getElementsByTagName("section")[0];
+      //  getElementS = [{}]
+      //  querySelectorAll = [{}]
+      //  getElement = elemento; 
+      //  querySelector = elemento;
+    const paragrafo1 = document.getElementById("paragrafo");
+    const diva = document.getElementsByClassName("beyonce--img")[0];
+    const inputNome = document.querySelector("#nome");
+    const titulo = window.document.querySelector("h1");
+        
+    // modificando valores: 
+    // .innerText pega o texto sem formatação.  .textContent pega o texto com formatação.  .innerHTML me permite modificar ou criar elementos com o html
+    titulo.innerHTML = "<p>Hoje faz sol</p> em <i> porto alegre <i>, ontem choveu";
+    // .value captura o valor do que foi escrito dentro da minha caixa de texto - input
+    inputNome.value = "Reprograma é show";
+
+    //modificando estilo:
+    titulo.style.color = "red";
+    //camelCase = letraDeCamelo
+    document.body.style.backgroundColor = "yellow";
+
+   //adicionando e removendo classes 
+    titulo.classList.add('classeDoMeuJava');
+    // titulo.classList.remove('classeDoMeuJava')
+    /*
+    Quando varios elementos são selecionados ao mesmo tempo, podemos iterar por eles.
+    for (let el of diva){
+        el.classList.remove('beyonce--img')
+    }
+    */ 
+
+    //pegando e modificando atributos
+    //console.log(diva.getAttribute('src'));
+    diva.setAttribute('src' , 'https://www.correio24horas.com.br/fileadmin/_processed_/0/b/csm_VF0720_Viola_Davis_Tout_3d988654d0.jpg');
+    diva.setAttribute("alt", "Viola Davis");
+    titulo.setAttribute("id","bananinha" );
+    </>
+</body>
+</html>
+
+
+
+
+----------REVISAO: .js-------------
+// const let var
+
+let nome = "Aida"; 
+//variavel let , recebe como valor uma string 
+let nomes = [
+    {
+        pais: "Brasil",
+        nome: "Aida",
+    },
+     "Quezia", "Fabiula", "Taiane", "Carol", 2, true];
+// valor de lista - array
+//console.log(nomes[0].pais); // primeiro item da lista com a propriedade pais
+//console.log(nomes);
+nomes.push('Nayara');
+//console.log(nomes);
+
+
+nomes.filter(function (elemento){
+   //console.log(elemento.pais)
+})
+/*
+const retornaNome = function( elemento, indice, array) {
+    return console.log(indice)
+}
+*/
+/*
+const retornaNome = (elemento, indice, array) => {
+    return console.log(elemento, indice, array)
+} 
+*/
+/*
+arrow function
+minhaFuncao() => {} 
+function minhaFuncao() {}
+
+nomes.map((item, index) =>  {
+    if(item == "Quezia"){
+        console.log(item, index)
+    }
+})
+*/
+
+// map e filter são funções de callback - 
+
+let cancoes = {
+    banda: "Dingo Bells", 
+    musicas: ['Eu vim passear', 'Mistério dos Trinta'], 
+}
+//console.log(cancoes.musicas[1]);
+
+
+
+
+
+
+ITA
+
+
+
+
+
