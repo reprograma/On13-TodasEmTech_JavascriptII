@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revendo eventos</title>
+    < defer type="text/java" src="./.js"></>
+</head>
+    <style>
+        #comoDeletaEssaDiv {
+    width: 300px; height: 250px; background-color: yellow;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.minhaImagem { 
+    width: 200px; 
+    border: 3px solid red;
+    border-radius: 50%;
+}
+
+        div {
+            width: 400px;
+            height: 400px;
+            background-color: blue;
+            transition: 0.7s;
+        }
+
+        .aumentei {
+            width: 500px;
+            height: 500px;
+        }
+    </style>
+<body>
+    <div id="comoDeletaEssaDiv">
+
+    </div>
+
+
+    <script type="text/javascript">
+
+    let sessao = document.querySelector('#article')
+    console.log(sessao.children);
+// para saber quais são os filhos do meu objeto u utilizo o children e assim eu posso verificar quem são os elementos filhos da minha sessao
+//sibiling são os irmão de minha sessao
+
+    const divDeletada = document.querySelector("#comoDeletaEssaDiv"); //selecionando um elemento já existente 
+    const body = document.body;  
+
+    const umaImagem = document.createElement("img"); // criando um novo elemento
+    umaImagem.setAttribute("src", "https://images.tcdn.com.br/img/img_prod/799330/girassol_amarelo_alto_453_1_20200523155201.jpg"); //adicionando atributo para a variavel umaImagem
+    umaImagem.setAttribute("alt", "girassol amarelo");
+    umaImagem.classList.add("minhaImagem");
+
+
+    body.removeChild(divDeletada); // remove o elemento filho
+    body.appendChild(divDeletada); // add elemento filhe
+    divDeletada.append(umaImagem);
+    // prepend adiciona como primeira filha, append adiciona como última
+
+    // divDeletada.append("Como um girassolllllll \n AMARELOÔO") pode fazer, mas não faça
+    
+    </script>
+    <div id="evento">
+
+    </div>
+
+    <form type="blabla">
+        <label for="bomDia">Que dia é hoje</label>
+        <input type="text" id="bomDia" name="bomDia" placeholder="que dia é hoje? ">
+        <button type="submit" id="submit" name="submit">Enviar</button>
+    </form>
+</body>
+</html>
+
+
