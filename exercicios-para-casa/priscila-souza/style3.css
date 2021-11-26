@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+  }
+  
+  body {
+    font-family: "Ubuntu", sans-serif;
+    background-color: yellow;
+  }
+  
+  #titulo {
+    text-align: center;
+    margin: 20px;
+  }
+  
+  #amarelo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  p {
+    text-align: center;
+    padding: 10px 400px;
+    margin: 20px;
+  }
+  
+  #image {
+    margin: 20px;
+    border: 2px solid black;
+  }
+  
+  #album {
+    text-decoration: none;
+    margin: 20px;
+    color: black;
+  }
+  
+  #album:hover{
+      background-color: black;
+      color: yellow;
+  }
