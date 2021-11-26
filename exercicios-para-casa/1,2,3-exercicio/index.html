@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <title>Turistando</title>
+    <style>
+        body{
+            background-color: #80a4de;
+            padding: 5%;
+            color: white;
+        }
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .image-plane{
+            width: 6%;
+            height: 10%;
+            margin-bottom: 3%;
+            border-radius: 10%;
+        }
+        h1{
+            text-align: center;
+            margin-bottom: 5%;
+            margin-right: 5%;
+            font-style: italic;
+            font-size: 40px;
+        }
+        
+        .paragraph{
+            font-size: 18px;
+            color: white;
+        }
+        .parent{
+            display: flex; 
+            justify-content: space-around;
+        }
+        .image-place{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-place img{
+           width: 400px;
+           height: 300px;
+           margin-bottom: 4%;
+        }
+        .image-place a{
+            font-size: 18px;
+            color: white;
+            vertical-align: text-bottom;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Lugares que pretendo visitar</h1>
+    </header>
+    <article>
+
+        <p>Bom, gostaria de compartilhar lugares que tenho muita vontade de conhecer. O primeiro é <strong> Seguro </strong>, as praias são lindas, um paraíso, assim como muitas praias ao redor da Bahia, porém Porto Seguro é o primeiro local que os portugueses embarcaram quando "descobriram"o Brasil.<br>
+        O segundo lugar é<strong> Gramado </strong>, cidade linda, com várias opções de passeio, gosto de conhecer lugares novos e lá definitavemente é um ambiente diferenciado, aparenta estarmos na Europa, além do clima ser totalmente oposto ao do Nordeste (no qual eu vivo).</p>
+            
+        <div class="parent">
+
+            <div class="image-place">
+                <img src="https://www.coconutexperience.com.br/wp-content/uploads/2017/04/Praia_do_Espelho.jpg" alt="Fotografia da Praia de Porto Seguro">
+                <a href="https://www.coconutexperience.com.br/porto-seguro-bahia/" target="_blank">Conhecer Porto Seguro</a>
+            </div>
+            
+           <div class="image-place">
+                <img src="https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-gramado-capa2019-04.jpg" alt="Fotografia do centro de Gramado">
+                <a href="https://malaprontagramado.com.br/o-que-fazer-em-gramado-e-canela/">Conhecer Gramado</a>
+            </div>
+            
+        </div>
+    </article>
+    <script src="./script.js" type="text/javascript"></script>
+</body>
+</html>
+
+    
