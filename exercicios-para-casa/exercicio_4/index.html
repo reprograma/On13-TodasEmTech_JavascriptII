@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="https://cdn.icon-icons.com/icons2/1303/PNG/512/checkform_85890.png">
+            <title>Formulário ♥</title>
+    </head>
+    <body>
+        <h1>Preencha o formulário com atenção!</h1>
+        <form>
+            <div>
+                <label for="nome"><strong>Nome:</strong></label>
+                <input type="text" name="nome" id="nome" placeholder="Mariazinha da Silva" required>
+
+                <label for="senha"><strong>Senha:</strong></label>
+                <input type="password" name="senha" id="senha" placeholder="Senha123" required>
+
+                <button class="botao" type="submit" onsubmit="">Entrar</button>
+            </div>
+        </form>
+        <script>
+            const input1 = document.getElementById('nome');
+            const input2 = document.getElementById('senha');
+            const button = document.getElementById('botao');
+
+            const paragrafo = document.createElement('p');
+            const mensagem = document.createTextNode('Sem permissão!');
+            paragrafo.appendChild(mensagem)
+
+            const botaoCor = document.querySelector('.botao');
+            botaoCor.addEventListener("mouseenter", function () {
+                botaoCor.style.backgroundColor = "red";
+            });
+
+            const mensagem = document.querySelector('#p');
+            if(input1 && input2){
+                mensagem.innerText = `Olá ${input1}`
+            }
+        </script>
+    </body>
+</html>
